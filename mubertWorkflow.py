@@ -10,6 +10,11 @@ import sys
 import threading
 import time
 from selenium.webdriver.chrome.options import Options
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 """
 TODO:
@@ -23,7 +28,7 @@ TODO:
 NUM_DRIVERS = 1 # need to make more microsoft accounts
 
 active_drivers = []
-version = 132
+version = int(os.getenv('CHROME_VERSION'))
 
 
 for i in range(NUM_DRIVERS):

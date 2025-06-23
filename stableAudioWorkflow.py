@@ -12,6 +12,10 @@ from pwordProtect import Protection
 import sys
 import threading
 import time
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 NUM_DRIVERS = 3
 

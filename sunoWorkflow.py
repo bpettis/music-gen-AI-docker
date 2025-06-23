@@ -20,13 +20,17 @@ from pwordProtect import Protection
 import sys
 import threading
 import time
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Initialize undetected
 #NUM_DRIVERS = len(Protection.sterne_names)
 NUM_DRIVERS = 2 # need to make more microsoft accounts
 
 active_drivers = []
-version = 132
+version = int(os.getenv('CHROME_VERSION'))
 
 for i in range(NUM_DRIVERS):
     active_drivers.append(uc.Chrome(version_main=version))
