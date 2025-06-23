@@ -31,3 +31,7 @@ CHROME_VERSION=137
 ```
 
 Each script will try to read the `CHROME_VERSION` environment variable to determine what version to try and load.
+
+## Setting the number of drivers
+
+Use `MAX_DRIVERS` environment variable to specify the maximum number of chrome browsers to launch at a time. As noted above, some workflows will only work with a few instances running at once
