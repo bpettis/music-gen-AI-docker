@@ -9,5 +9,5 @@ class Protection:
             sterne_names.append(parts[0])
             sterne_pwords.append(parts[1])
     
- 
-
+    names = sterne_names
+    passwords = sterne_pwords
