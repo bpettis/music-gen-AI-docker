@@ -17,7 +17,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-NUM_DRIVERS = 3
+NUM_DRIVERS = os.getenv('MAX_DRIVERS')
 
 active_drivers = []
 #version = 132

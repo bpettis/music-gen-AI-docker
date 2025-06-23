@@ -65,6 +65,8 @@ from pwordProtect import Protection
 
 # Initialize undetected
 NUM_DRIVERS = len(Protection.names)
+
+NUM_DRIVERS = os.getenv('MAX_DRIVERS')
 active_drivers = []
 
 version = int(os.getenv('CHROME_VERSION'))

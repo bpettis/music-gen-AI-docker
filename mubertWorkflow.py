@@ -26,7 +26,7 @@ TODO:
 # Initialize undetected
 #NUM_DRIVERS = len(Protection.sterne_names)
 NUM_DRIVERS = 1 # need to make more microsoft accounts
-
+NUM_DRIVERS = os.getenv('MAX_DRIVERS')
 active_drivers = []
 version = int(os.getenv('CHROME_VERSION'))
 
