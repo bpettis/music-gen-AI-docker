@@ -135,7 +135,10 @@ def download():
         download_btn = driver.find_element(By.XPATH, '/html/body/div/main/div[3]/div[2]/div/div[2]/div[2]/div[1]/div/div[3]/button[2]')
         download_btn.click()
 
-        mp3_btn = driver.find_element(By.XPATH, '/html/body/div/div[1]/div/div/div[1]/button')
+        random_sleep(1, 2)
+
+        # mp3_btn = driver.find_element(By.XPATH, '/html/body/div/div[1]/div/div/div[1]/button')
+        mp3_btn = driver.find_element(By.XPATH, '/html/body/div[1]/div[1]/div/div/div[1]/button')
         mp3_btn.click()
 
         random_sleep(1, 2)
