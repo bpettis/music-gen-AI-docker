@@ -10,6 +10,7 @@ import sys
 import threading
 import time
 from selenium.webdriver.chrome.options import Options
+import undetected_chromedriver as uc
 import os
 from dotenv import load_dotenv
 
@@ -34,7 +35,9 @@ version = int(os.getenv('CHROME_VERSION'))
 for i in range(NUM_DRIVERS):
     options = Options()
     options.add_argument("--disable-blink-features=AutomationControlled") # bypass recaptcha
-    driver = webdriver.Chrome(options=options)  # Regular ChromeDriver initialization
+    options.add_argument('--version-main=' + str(os.getenv('CHROME_VERSION')))
+    driver = uc.Chrome(options=options)  # Regular ChromeDriver initialization
+    
     active_drivers.append(driver)
 
 # Global event to control the spinner
