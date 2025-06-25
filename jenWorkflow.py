@@ -26,7 +26,7 @@ for i in range(NUM_DRIVERS):
     account = Protection.sterne_names[i].split('@')[0]
 
     chromeOptions = uc.ChromeOptions()
-    prefs = {"download.default_directory" : f"/Users/clarachen/Documents/Harvard/Radcliffe Research Partners/music-gen-AI/jen/{account}"}
+    prefs = {"download.default_directory" : f"{os.getenv('BASE_OUTPUT_DIRECTORY')}/music-gen-AI/stable_audio/{account}"}
     chromeOptions.add_experimental_option("prefs",prefs)
 
     active_drivers.append(uc.Chrome(options=chromeOptions))

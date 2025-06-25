@@ -26,9 +26,10 @@ for i in range(NUM_DRIVERS):
     account = Protection.sterne_names[i].split('@')[0]
 
     chromeOptions = uc.ChromeOptions()
-    prefs = {"download.default_directory" : f"/Users/clarachen/Documents/Harvard/Radcliffe Research Partners/music-gen-AI/stable_audio/{account}"}
+    prefs = {"download.default_directory" : f"{os.getenv('BASE_OUTPUT_DIRECTORY')}/music-gen-AI/stable_audio/{account}"}
     chromeOptions.add_experimental_option("prefs",prefs)
-
+    chromeOptions.add_argument("--headless=new")
+    chromeOptions.add_argument("--no-sandbox")
     active_drivers.append(uc.Chrome(options=chromeOptions))
     #active_drivers.append(uc.Chrome(version_main=version, options=chromeOptions))
 
