@@ -14,6 +14,14 @@
 - Need to create more facebook accounts to run multi-account workflows
 - Login is (relatively) slow on purpose just to bypass facebook bot detection
 
+# Environment Variables and dot-env
+
+There are a handful of settings/options throughout the scripts that were previously being hard-coded within each file. I've changed some of these to be set with an environment variable. You can set (and change) each of these options in a few different ways:
+
+- by manually defining a variable in your shell session (e.g. `export CHROME_VERSION=137`)
+- by manually specifying the variable before running each script (e.g. `CHROME_VERSION=137 python3 stableAudioWorkflow.py`)
+- by creating a `.env` file at the root directory and defining each variable on its own line
+
 ## Chrome Versioning
 
 undetected-webdriver gets really particular about what version of Chrome is running. You may get an error like this: 
